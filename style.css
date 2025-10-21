@@ -8,6 +8,7 @@ img {
     padding: var(--spacing);
     background: var(--base);
     filter: blur(var(--blur));
+    height: 400px;
 }
 
 .hl {
@@ -20,10 +21,38 @@ body {
     color: white;
     font-family: 'helvatica neue', sans-serif;
     font-weight: 100;
-    font-size: 50px;
+    font-size: 30px;
+    height: 100%;
+    width: 100%;
 }
 
 .controls {
     margin-bottom: 50px;
 
+}
+
+@media (max-width: 600px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .controls {
+        display: flex;
+        width: 70%;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .controls input {
+        width: 80%;
+    }
+
+    #color-sel {
+        width: 100px;
+        height: 100px;
+    }
 }
